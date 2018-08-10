@@ -7,10 +7,10 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
 
     // TODO: define shared variables for this instance
-    //Pts.namespace( this );
+    Pts.namespace( window );
   
     // create Space and Form
-    var space = new CanvasSpace(el);
+    var space = new CanvasSpace(el.id);
     
     return {
 
@@ -27,7 +27,7 @@ HTMLWidgets.widget({
         space.add( () => form.point( space.pointer, 10 ) );
         
         // start
-        space.playOnce(200).bindMouse();
+        space.playOnce(200).bindMouse().bindTouch();
 
       
       },
