@@ -27,7 +27,7 @@ HTMLWidgets.widget({
         space.add( () => form.point( space.pointer, 10 ) );
         
         // start
-        space.playOnce(200).bindMouse().bindTouch();
+        space.play().bindMouse().bindTouch();
 
       
       },
